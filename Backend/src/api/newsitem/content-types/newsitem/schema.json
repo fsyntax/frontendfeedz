@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "newsitems",
+  "info": {
+    "singularName": "newsitem",
+    "pluralName": "newsitems",
+    "displayName": "newsitem",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "unique": true
+    },
+    "preview": {
+      "type": "string"
+    },
+    "link": {
+      "type": "string"
+    },
+    "creator": {
+      "type": "string"
+    },
+    "sponsored": {
+      "type": "boolean"
+    }
+  }
+}
