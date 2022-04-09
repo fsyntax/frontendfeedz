@@ -8,7 +8,7 @@
     "description": ""
   },
   "options": {
-    "draftAndPublish": true
+    "draftAndPublish": false
   },
   "pluginOptions": {},
   "attributes": {
@@ -27,6 +27,24 @@
     },
     "sponsored": {
       "type": "boolean"
+    },
+    "description": {
+      "type": "text"
+    },
+    "language": {
+      "type": "string"
+    },
+    "pubDate": {
+      "type": "string"
+    },
+    "categories": {
+      "type": "string"
+    },
+    "content": {
+      "type": "text"
+    },
+    "channeltitle": {
+      "type": "string"
     }
   }
 }

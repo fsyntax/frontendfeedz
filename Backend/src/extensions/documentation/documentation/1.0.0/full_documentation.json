@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2022-04-08T21:49:53.826Z"
+    "x-generation-date": "2022-04-09T20:06:24.716Z"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -2415,15 +2415,29 @@
                               "sponsored": {
                                 "type": "boolean"
                               },
+                              "description": {
+                                "type": "string"
+                              },
+                              "language": {
+                                "type": "string"
+                              },
+                              "pubDate": {
+                                "type": "string"
+                              },
+                              "categories": {
+                                "type": "string"
+                              },
+                              "content": {
+                                "type": "string"
+                              },
+                              "channeltitle": {
+                                "type": "string"
+                              },
                               "createdAt": {
                                 "type": "string",
                                 "format": "date-time"
                               },
                               "updatedAt": {
-                                "type": "string",
-                                "format": "date-time"
-                              },
-                              "publishedAt": {
                                 "type": "string",
                                 "format": "date-time"
                               },
@@ -3010,15 +3024,29 @@
                             "sponsored": {
                               "type": "boolean"
                             },
+                            "description": {
+                              "type": "string"
+                            },
+                            "language": {
+                              "type": "string"
+                            },
+                            "pubDate": {
+                              "type": "string"
+                            },
+                            "categories": {
+                              "type": "string"
+                            },
+                            "content": {
+                              "type": "string"
+                            },
+                            "channeltitle": {
+                              "type": "string"
+                            },
                             "createdAt": {
                               "type": "string",
                               "format": "date-time"
                             },
                             "updatedAt": {
-                              "type": "string",
-                              "format": "date-time"
-                            },
-                            "publishedAt": {
                               "type": "string",
                               "format": "date-time"
                             },
@@ -3494,15 +3522,29 @@
                       "sponsored": {
                         "type": "boolean"
                       },
+                      "description": {
+                        "type": "string"
+                      },
+                      "language": {
+                        "type": "string"
+                      },
+                      "pubDate": {
+                        "type": "string"
+                      },
+                      "categories": {
+                        "type": "string"
+                      },
+                      "content": {
+                        "type": "string"
+                      },
+                      "channeltitle": {
+                        "type": "string"
+                      },
                       "createdAt": {
                         "type": "string",
                         "format": "date-time"
                       },
                       "updatedAt": {
-                        "type": "string",
-                        "format": "date-time"
-                      },
-                      "publishedAt": {
                         "type": "string",
                         "format": "date-time"
                       },
@@ -3570,15 +3612,29 @@
                             "sponsored": {
                               "type": "boolean"
                             },
+                            "description": {
+                              "type": "string"
+                            },
+                            "language": {
+                              "type": "string"
+                            },
+                            "pubDate": {
+                              "type": "string"
+                            },
+                            "categories": {
+                              "type": "string"
+                            },
+                            "content": {
+                              "type": "string"
+                            },
+                            "channeltitle": {
+                              "type": "string"
+                            },
                             "createdAt": {
                               "type": "string",
                               "format": "date-time"
                             },
                             "updatedAt": {
-                              "type": "string",
-                              "format": "date-time"
-                            },
-                            "publishedAt": {
                               "type": "string",
                               "format": "date-time"
                             },
@@ -4074,15 +4130,29 @@
                             "sponsored": {
                               "type": "boolean"
                             },
+                            "description": {
+                              "type": "string"
+                            },
+                            "language": {
+                              "type": "string"
+                            },
+                            "pubDate": {
+                              "type": "string"
+                            },
+                            "categories": {
+                              "type": "string"
+                            },
+                            "content": {
+                              "type": "string"
+                            },
+                            "channeltitle": {
+                              "type": "string"
+                            },
                             "createdAt": {
                               "type": "string",
                               "format": "date-time"
                             },
                             "updatedAt": {
-                              "type": "string",
-                              "format": "date-time"
-                            },
-                            "publishedAt": {
                               "type": "string",
                               "format": "date-time"
                             },
@@ -4569,15 +4639,29 @@
                       "sponsored": {
                         "type": "boolean"
                       },
+                      "description": {
+                        "type": "string"
+                      },
+                      "language": {
+                        "type": "string"
+                      },
+                      "pubDate": {
+                        "type": "string"
+                      },
+                      "categories": {
+                        "type": "string"
+                      },
+                      "content": {
+                        "type": "string"
+                      },
+                      "channeltitle": {
+                        "type": "string"
+                      },
                       "createdAt": {
                         "type": "string",
                         "format": "date-time"
                       },
                       "updatedAt": {
-                        "type": "string",
-                        "format": "date-time"
-                      },
-                      "publishedAt": {
                         "type": "string",
                         "format": "date-time"
                       },
