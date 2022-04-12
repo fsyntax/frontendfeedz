@@ -2,17 +2,12 @@
   <div class="container">
     <CBox
       v-bind="mainStyles[colorMode]"
-      d="flex"
-      w="100vw"
-      h="100vh"
-      flex-dir="column"
-      justify-content="center"
+    
     >
-      <CHeading text-align="center" mb="4"> ⚡️ Hello chakra-ui/vue </CHeading>
+      <CHeading text-align="center" > ⚡️ Hello chakra-ui/vue </CHeading>
       <CButton @click="showToast"></CButton>
-      <div v-for="item in items" :key="item.id">
-  {{item.attributes.title}}
-      </div>
+
+      <Newsitems :items="items"/>
     </CBox>
   </div>
 </template>
