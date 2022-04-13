@@ -4,10 +4,9 @@
       v-bind="mainStyles[colorMode]"
     
     >
-      <CHeading text-align="center" > ⚡️ Hello chakra-ui/vue </CHeading>
-      <CButton @click="showToast"></CButton>
+      <!-- <CButton @click="showToast"></CButton> -->
 
-      <Newsitems :items="items"/>
+      <FeedItems :items="items"/>
     </CBox>
   </div>
 </template>

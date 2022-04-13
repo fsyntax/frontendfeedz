@@ -9241,6 +9241,11 @@ std-env@^2.2.1:
   dependencies:
     ci-info "^3.1.1"
 
+strapi-provider-email-console@^0.0.1:
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/strapi-provider-email-console/-/strapi-provider-email-console-0.0.1.tgz#a55a1f15d2ad5b8c7ce25fc39bc957a50ff5e558"
+  integrity sha512-Q/Jjt/zvqflh04z1cN3SQjSYUSzJ2iVy5yvaO+nbCeeY2awXs7r9BGASfdUk6ork2NKsC3bN27hceyOwYJWzTA==
+
 stream-browserify@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/stream-browserify/-/stream-browserify-3.0.0.tgz#22b0a2850cdf6503e73085da1fc7b7d0c2122f2f"

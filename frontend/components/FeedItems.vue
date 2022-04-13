@@ -13,13 +13,11 @@
         </h3>
       </div>
       <div class="ff-feedCard__body">
-        <c-box
-          class="ff-feedCard__preview"
-          :class="`ff-${item.id}`"
-          @click="loggit(item.id)"
-        >
+        <c-box class="ff-feedCard__preview" :class="`ff-${item.id}`">
           {{ item.attributes.preview }}
-          <span class="ff-feedCard__preview--toggler">Read more</span>
+          <span class="ff-feedCard__preview--toggler" @click="expandPreview(item.id)"
+            >Read more</span
+          >
         </c-box>
       </div>
       <div class="ff-feedCard__footer">
@@ -47,15 +45,9 @@ export default {
     }
   },
   methods: {
-    loggit(id) {
+    expandPreview(id) {
       document.querySelector(`.ff-${id}`).classList.toggle('expanded');
       console.log(document.querySelector(`.ff-${id}`));
-      if(this.isExpanded === true) {
-        this.isExpanded = false;
-      }
-      if(this.isExpanded === false) {
-        this.isExpanded = true;
-      }
     }
 
   }
@@ -69,13 +61,18 @@ export default {
   padding: 1em;
   background: lightgrey;
   border-radius: var(--border-radius-md);
+  &__title {
+    font-size: 1.1em;
+    font-weight: 600;
+    margin-bottom: var(--spacer-sm);
+  }
   &__preview {
-    max-height: 50px;
+    max-height: 100px;
     overflow: hidden;
     transition: max-height 400ms;
     position: relative;
-    margin-bottom: 2em;
-    &::after {
+    margin-bottom: var(--spacer-md);
+    &:not(.expanded)::after {
       content: '';
       position: absolute;
       z-index: 1;
@@ -88,10 +85,11 @@ export default {
         lightgrey 90%
       );
       width: 100%;
-      height: 30px;
+      height: 90px;
     }
     &.expanded {
       max-height: 1000px;
+      padding-bottom: calc(var(--spacer-md) + var(--spacer-sm));
     }
     &--toggler {
       position: absolute;
@@ -100,6 +98,23 @@ export default {
       z-index: 10;
       left: 50%;
       transform: translateX(-50%);
+      padding: 0 0.3em;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: var(--border-radius-sm);
+      background-color: cadetblue;
+      color: #fff;
+      font-size: 0.7em;
+      cursor: pointer;
+      &::after {
+      content: '';
+      position: absolute;
+      width: 100vh;
+      height: 2px;
+      background-color: cadetblue;
+      z-index: -1;        
+      }
     }
   }
 }

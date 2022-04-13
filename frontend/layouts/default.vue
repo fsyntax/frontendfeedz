@@ -3,6 +3,7 @@
     <CThemeProvider>
       <CColorModeProvider>
         <CBox font-family="body" as="main">
+        <FfHeader />
           <CReset />
           <Nuxt />
         </CBox>

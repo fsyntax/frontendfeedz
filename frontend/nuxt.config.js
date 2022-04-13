@@ -38,6 +38,8 @@ export default {
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
     '@nuxtjs/strapi',
+    '@nuxtjs/dotenv',
+    '@nuxtjs/auth-next',
   ],
   strapi: {
     url: 'http://localhost:1337/api',
@@ -46,14 +48,29 @@ export default {
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
     // Workaround to avoid enforcing hard-coded localhost:3000: https://github.com/nuxt-community/axios-module/issues/308
-    baseURL: '/',
+    baseURL: process.env.API_AUTH_URL,
   },
-  css: [
+  css: ['@/assets/css/mixins.scss', '@/assets/css/variables.scss'],
 
-    '@/assets/css/mixins.scss',
-    '@/assets/css/variables.scss'
-  ],
-
+  auth: {
+    strategies: {
+      local: {
+        endpoints: {
+          login: {
+            url: 'api/auth/local',
+            method: 'post',
+            propertyName: 'jwt',
+          },
+          user: {
+            url: 'users/me',
+            method: 'get',
+            propertyName: false,
+          },
+          logout: false,
+        },
+      },
+    },
+  },
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
 }
