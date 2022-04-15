@@ -7,32 +7,23 @@
 
           <FfNotifications v-if="error" type="danger" :message="error" />
 
-          <form method="post" @submit.prevent="login">
-            <div class="field">
-              <label class="label">Email</label>
-              <div class="control">
-                <input
-                  v-model="email"
-                  type="email"
-                  class="input"
-                  name="email"
-                />
-              </div>
-            </div>
-            <div class="field">
-              <label class="label">Password</label>
-              <div class="control">
-                <input
-                  v-model="password"
-                  type="password"
-                  class="input"
-                  name="password"
-                />
-              </div>
-            </div>
-            <div class="control">
-              <button type="submit" class="button is-dark">Log In</button>
-            </div>
+          <form method="post" @submit.prevent="userLogin">
+            <label class="label">Email</label>
+            <input
+              v-model="login.identifier"
+              type="text"
+              class="input"
+              name="email"
+            />
+
+            <label class="label">Password</label>
+            <input
+              v-model="login.password"
+              type="password"
+              class="input"
+              name="password"
+            />
+            <button type="submit" class="button is-dark">Log In</button>
           </form>
           <div style="margin-top: 20px">
             <p>
@@ -55,24 +46,24 @@ export default {
     name:"LoginPage",
   data() {
     return {
-      email: '',
-      password: '',
-      error: null,
+      login: {
+        identifier: '',
+        password: '',
+      },
+      error: "",
     }
   },
   methods: {
-    async login() {
-      this.error = null
+  async userLogin() {
+    console.log(this.login)
       try {
-        await this.$auth.loginWith('local', {
-          data: {
-            identifier: this.email,
-            password: this.password,
-          },
-        })
-        this.$router.push('/')
+        const response = await this.$auth.loginWith('local', { data: this.login })
+        console.log(response.data.user)
+           await this.$auth.setUserToken(response.data.jwt)
+          this.$router.push('/');        
       } catch (e) {
-        this.error = e.response.data.message
+        //  this.error = e.response.data.error.message;
+         console.log(e.response.data.error)
       }
     },
   },

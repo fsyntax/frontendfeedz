@@ -19,6 +19,7 @@ export default {
   components: {
 
   },
+  auth: false,
   inject: ['$chakraColorMode', '$toggleColorMode'],
   data () {
     return {

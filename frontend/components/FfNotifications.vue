@@ -1,5 +1,5 @@
 <template>
-  <div :class="`is-${type}`" class="notification">
+  <div class="ff-notification" :class="`is-${type}`">
     {{ message }}
   </div>
 </template>
@@ -20,3 +20,10 @@ export default {
  },
 };
 </script>
+
+<style lang="scss">
+.ff-notification {
+  min-height: 100px;
+  background: lightgoldenrodyellow;
+}
+</style>

@@ -22,6 +22,8 @@ export default {
   color: #fff;
   padding: 0 1em;
   box-shadow: var(--box-shadow-light);
+  display: flex;
+  justify-content: space-between;
   &__logo {
     font-size: 1.2em;
     font-weight: 600;

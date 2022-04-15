@@ -55,21 +55,24 @@ export default {
   auth: {
     strategies: {
       local: {
+        token: {
+          property: 'jwt',
+          global: true,
+        },
+        user: {
+          property: false,
+          autoFetch: false,
+        },
         endpoints: {
-          login: {
-            url: 'api/auth/local',
-            method: 'post',
-            propertyName: 'jwt',
-          },
-          user: {
-            url: 'users/me',
-            method: 'get',
-            propertyName: false,
-          },
-          logout: false,
+          login: { url: '/api/auth/local', method: 'post' },
+          logout: { url: '/api/auth/local', method: 'post' },
+          user: { url: '/api/users/me', method: 'get', propertyName: false },
         },
       },
     },
+  },
+  router: {
+    middleware: ['auth']
   },
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},

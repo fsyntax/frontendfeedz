@@ -64,6 +64,7 @@
 
 export default {
     name: 'RegisterPage',
+    auth: false,
   data() {
     return {
       username: '',
@@ -86,7 +87,7 @@ export default {
         this.success = `A confirmation link has been sent to your email account. \
  Please click on the link to complete the registration process.`
       } catch (e) {
-        this.error = e.response.data
+        this.error = e.response.data.message
       }
     },
   },
