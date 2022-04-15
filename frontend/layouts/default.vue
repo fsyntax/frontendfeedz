@@ -3,8 +3,8 @@
     <CThemeProvider>
       <CColorModeProvider>
         <CBox font-family="body" as="main">
-        <FfHeader />
           <CReset />
+          <FfHeader />
           <Nuxt />
         </CBox>
       </CColorModeProvider>
